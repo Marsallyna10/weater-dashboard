@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dasbor Cuaca Responsif</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="app-header">
+    <img src="sunrise.png" alt="Logo Cuaca" class="logo">
+    <h1>🌤️ Dasbor Cuaca</h1>
+    <button id="toggleTheme" class="theme-btn">🌙</button>
+  </header>
+
+  <main>
+    <!-- Pencarian -->
+    <section id="search" class="card">
+      <input type="text" id="cityInput" placeholder="Cari kota..." aria-label="Cari kota">
+      <button id="searchBtn">🔍</button>
+    </section>
+
+    <!-- Cuaca Saat Ini -->
+    <section id="currentWeather" class="card fade-in">
+      <h2 id="cityName">-</h2>
+      <img id="weather-icon src="" alt="Ikon Cuaca" class="weather-icon">
+      <p id="temperature">-- °C</p>
+      <p id="description">-</p>
+      <div class="details">
+        <p>🌡️ Feels Like: <span id="feelsLike">--</span>°C</p>
+        <p>💧 Kelembapan: <span id="humidity">--</span>%</p>
+        <p>💨 Angin: <span id="wind">--</span> m/s</p>
+      </div>
+    </section>
+
+    <!-- Prakiraan -->
+    <section id="forecast" class="card fade-in">
+      <h2>Prakiraan 5 Hari</h2>
+      <div id="forecastContainer" class="forecast-grid"></div>
+    </section>
+  </main>
+
+  <footer class="app-footer">
+    <p>Data cuaca dari <a href="https://openweathermap.org/" target="_blank">OpenWeatherMap</a></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
